@@ -62,6 +62,15 @@ public class User {
         this.createdAt = createdAt;
         this.imgFileName = imgFileName;
     }
+
+    //회원정보용 업데이트 의미있는 메서드
+//    public void update(UserRequest.UpdateDTO requestDTO) {
+//        this.password = requestDTO.getPassword();
+//        this.birth = requestDTO.getBirth();
+//        this.phone = requestDTO.getPhone();
+//        this.address = requestDTO.getAddress();
+//    }
+
 }
 
 

@@ -20,17 +20,17 @@
                 <h4>개인 회원정보 수정</h4>
             </div>
             <div class="child" style="width: 100%">
-                <form action="/user/{{sessionUser.id}}/update" method="post" enctype="application/x-www-form-urlencoded">
+                <form action="/user/{{id}}/update" method="post" enctype="application/x-www-form-urlencoded">
                     <div class="form-group mb-2">
                         <input type="password" name="password" class="form-control" placeholder="Enter password"
                                id="password">
                     </div>
                     <div class="form-group mb-2">
-                        <input type="text" name="myName" class="form-control" placeholder="" id="name" value="{{user.myName}}">
+                        <input type="text" name="myName" class="form-control" placeholder="" id="name" value="{{user.myName}}" disabled>
                     </div>
 
                     <div class="form-group mb-2">
-                        <input type="date" name="birth" class="form-control" placeholder="" id="birth" value="">
+                        <input type="date" name="birth" class="form-control" placeholder="" id="birth" value="33">
                     </div>
 
                     <div class="form-group mb-2">
@@ -42,7 +42,7 @@
                     <div id="callBackDiv">
                         <div class="form-group mb-4">
                             <input class="form-control" type="text" id="address" readonly
-                                   placeholder="" name="address" value="{{user.address}}"/>
+                                   placeholder="" name="address" value="55"/>
                         </div>
                     </div>
                     <div class="d-grid gap-2 mb-2">

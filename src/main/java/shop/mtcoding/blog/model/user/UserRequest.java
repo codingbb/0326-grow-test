@@ -3,8 +3,20 @@ package shop.mtcoding.blog.model.user;
 import lombok.Data;
 
 import java.sql.Date;
+import java.sql.Time;
+import java.sql.Timestamp;
 
 public class UserRequest {
+
+    @Data
+    public static class UpdateDTO{
+        private String password;
+        private String myName;
+        private Date birth;
+        private String phone;
+        private String address;
+
+    }
 
     @Data
     public static class JoinDTO{
