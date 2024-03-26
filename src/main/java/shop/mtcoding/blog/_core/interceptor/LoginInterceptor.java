@@ -10,7 +10,7 @@ import shop.mtcoding.blog.model.user.User;
 public class LoginInterceptor implements HandlerInterceptor{
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        System.out.println("preHandle............");
+//        System.out.println("preHandle............");
         HttpSession session = request.getSession();
 
         User sessionUser = (User) session.getAttribute("sessionUser");

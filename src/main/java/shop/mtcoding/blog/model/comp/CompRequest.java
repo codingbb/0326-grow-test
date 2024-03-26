@@ -6,6 +6,7 @@ import shop.mtcoding.blog.model.user.User;
 
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,7 +54,7 @@ public class CompRequest {
         private String compName;
         private String phone;
         private String address;
-        private Date birth;
+        private LocalDate birth;
         private String businessNumber;
         private String homepage;
     }
@@ -66,7 +67,7 @@ public class CompRequest {
         private String password;
         private String phone;
         private String address;
-        private Date birth;
+        private LocalDate birth;
         private String businessNumber;
         private String photo;
         private String compName;

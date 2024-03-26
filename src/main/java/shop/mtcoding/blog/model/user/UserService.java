@@ -29,14 +29,16 @@ public class UserService {
     //유저 회원정보 폼 업데이트 메소드
     @Transactional
     public User updateById(User sessionUser, UserRequest.UpdateDTO requestDTO) {
+        System.out.println(requestDTO);
         User user = userRepo.findById(sessionUser.getId())
                 .orElseThrow(() -> new Exception401("로그인이 필요한 서비스입니다."));
 
-        user.setPassword(requestDTO.getPassword());
-    //    user.setMyName(requestDTO.getMyName());
-        user.setBirth(requestDTO.getBirth());
-        user.setPhone(requestDTO.getPhone());
-        user.setAddress(requestDTO.getAddress());
+        user.update(requestDTO);
+//        user.setPassword(requestDTO.getPassword());
+//        user.setMyName(requestDTO.getMyName());
+//        user.setBirth(requestDTO.getBirth());
+//        user.setPhone(requestDTO.getPhone());
+//        user.setAddress(requestDTO.getAddress());
 
         return user;
     }

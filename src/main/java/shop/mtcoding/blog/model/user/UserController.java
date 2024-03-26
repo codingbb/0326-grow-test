@@ -97,10 +97,12 @@ public class UserController {
         return "/user/scrap";
     }
 
-    @PutMapping("/user/{id}")
+    @PostMapping("/user/{id}/update")
     public String updateForm(@PathVariable Integer id, UserRequest.UpdateDTO requestDTO) {
         User sessionUser = (User) session.getAttribute("sessionUser");
         userService.updateById(sessionUser, requestDTO);
+        User user = userService.findById(sessionUser.getId());
+        System.out.println(user.getPhone());
 
         return "redirect:/";
     }

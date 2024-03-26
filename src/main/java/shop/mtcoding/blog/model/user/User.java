@@ -10,6 +10,7 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.time.LocalDate;
 
 @NoArgsConstructor
 @Table(name = "user_tb")
@@ -28,7 +29,7 @@ public class User {
     @Column(nullable = false)
     private String phone;
     private String address;
-    private Date birth;
+    private LocalDate birth;
     @Column(unique = true)
     private String businessNumber;
     private String photo;
@@ -47,7 +48,7 @@ public class User {
     private String imgFileName;
 
     @Builder
-    public User(Integer id, String email, String myName, String password, String phone, String address, Date birth, String businessNumber, String photo, String compName, String homepage, Integer role, Timestamp createdAt, String imgFileName) {
+    public User(Integer id, String email, String myName, String password, String phone, String address, LocalDate birth, String businessNumber, String photo, String compName, String homepage, Integer role, Timestamp createdAt, String imgFileName) {
         this.id = id;
         this.email = email;
         this.myName = myName;
@@ -64,12 +65,12 @@ public class User {
     }
 
     //회원정보용 업데이트 의미있는 메서드
-//    public void update(UserRequest.UpdateDTO requestDTO) {
-//        this.password = requestDTO.getPassword();
-//        this.birth = requestDTO.getBirth();
-//        this.phone = requestDTO.getPhone();
-//        this.address = requestDTO.getAddress();
-//    }
+    public void update(UserRequest.UpdateDTO requestDTO) {
+        this.password = requestDTO.getPassword();
+        this.birth = requestDTO.getBirth();
+        this.phone = requestDTO.getPhone();
+        this.address = requestDTO.getAddress();
+    }
 
 }
 

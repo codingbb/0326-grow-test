@@ -5,6 +5,7 @@ import lombok.Data;
 import java.sql.Date;
 import java.sql.Time;
 import java.sql.Timestamp;
+import java.time.LocalDate;
 
 public class UserRequest {
 
@@ -12,7 +13,7 @@ public class UserRequest {
     public static class UpdateDTO{
         private String password;
         private String myName;
-        private Date birth;
+        private LocalDate birth;
         private String phone;
         private String address;
 
